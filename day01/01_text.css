@@ -1,0 +1,26 @@
+body {
+    font-family: "Oleo Script", sans-serif;
+}
+
+body p {
+    font-weight: bold;
+    text-shadow: 2px 1px 4px rgb(251, 255, 0);
+}
+
+.pics {
+    width: 300px;
+}
+
+.range {
+    width: 400px;
+}
+
+#switch {
+    box-shadow: 2px 2px 2px rgb(67, 68, 68);
+    background-color: rgb(255, 250, 0);
+}
+
+#switch:hover {
+    background-color: white;
+    box-shadow: 2px 2px 2px rgb(255, 250, 0);
+}

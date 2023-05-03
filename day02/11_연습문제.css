@@ -1,0 +1,17 @@
+body {
+    text-align: left;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.general {
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+}

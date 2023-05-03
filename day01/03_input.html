@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="01_text.css">
+    <title>Input Tag</title>
+</head>
+<body>
+    <!-- input tag도 단일태그로 여러가지 다양한 기능에 활용 
+        type 속성에 따라 여러가지 기능으로 사용된다.
+        <input type="속성명">
+        <form> 태그와 같이 사용된다.
+    -->
+    <!-- type = "text": 가장많이 사용 영문, 한글 특수문자등의 문자를 입력할떄 사용
+        placeholder: 사전 문구 표시 -->
+    <input type="text" placeholder="Enter your name">
+    <input type="text"><br>
+
+    <!-- type="button": 일반 버튼 -->
+    <!-- type="submit": 전송 버튼 -->
+    <!-- type="reset": 취소 버튼 -->
+    <form action="#">
+        <input type="text" name="date">
+        <input type="text" name="datapass">
+        <input type="button" value="button">
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    
+    <!-- type="password" -->
+    <input type="password">
+
+    <!-- 다중선택 -->
+    <input type="checkbox">
+    <!-- 여러개중 하나만 선택 -->
+    <input type="radio">
+    </form>
+    <hr>
+    <form action="#">
+        <p>좋아하는 과일은?(복수선택가능)</p>
+        <!-- name변수 value값 -->
+        <input type="checkbox" name="fruit" value="apple"> 사과
+        <input type="checkbox" name="fruit" value="orange"> 오렌지
+        <input type="checkbox" name="fruit" value="banana"> 바나나
+        <input type="submit" value="전송">
+    </form>
+    <hr>
+    <form action="">
+        <p>좋아하는 과일은?</p>
+        <label for="apple">사과</label>
+        <input type="checkbox" name="fruit" value="apple" id="apple">
+        <label for="orange">오렌지
+            <input type="checkbox" name="fruit" value="orange" id="orange">
+        </label>
+        <!-- label for와 input id를 동일하게 기입하면 동기화된다. -->
+        <label for="banana">바나나
+            <input type="checkbox" name="fruit" value="banana" id="banana">
+        </label>
+        <input type="submit">
+    </form>
+    <hr>
+    <!-- type="color": 색을 선택할 때 사용-->
+    <form action="">
+        <input type="color" name="color">
+        <input type="submit">
+    </form>
+    <hr>
+
+    <!-- 
+        type="month": 년 월
+        type="week": 년 주
+        type="date": 년 월 일
+        type="datetime-local": 년월일시분초 표시
+        type="time": 시분초 표시
+        실무에서는 jquery에서 제공하는 datepicker
+        부트스트랩에서 제공하는 datepicker를 이용한다.
+     -->
+     <input type="date">
+     <input type="week">
+     <input type="month">
+
+     <!-- type="email" name="email"-->
+     <!-- type="url": url형식인지 체크 -->
+     <form action="">
+        <input type="url">
+        <input type="submit">
+         <input type="email" name="email">
+         <input type="submit">
+     </form>
+
+     <!-- type="file": 첨부파일 선택 -->
+     <input type="file" name="" id="">
+
+     <!-- type="hidden": 숨김속성 -->
+     <input type="hidden">
+
+     <!-- type="image": img태그와 동일 -->
+     <input type="image" src="/img/2-days-madrid-insta.jpg" alt="Madrid pics" class="pics">
+
+     <!-- type="number": 수량 -->
+     <input type="number">
+
+     <!-- type="range": 상태바를 보여줌 -->
+     <br>
+     1<input type="range" class="range">10
+     <hr>
+     <!-- type="radio"를 이용하여 on off 스위치 -->
+     <form action="#">
+        <p>스위치 on/off</p>
+        <label for="on">스위치 on
+            <input type="radio" id="on" name="status" value="on">
+        </label>
+        <label for="off">스위치 off
+            <input type="radio" id="off" name="status" value="off">
+        </label>
+        <input type="submit" id="switch">
+     </form>
+
+
+</body>
+</html>

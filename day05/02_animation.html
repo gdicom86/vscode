@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. 애니메이션 등록 (@keyframe)
+            시간비율 0-100% 0%(from) 100%(to) 괄호로 대체 가능
+        
+        @keyframe 애니메이션명 {
+            시간비율 {스타일}
+            시간비율 {스타일}
+            ....
+        }
+
+        2. 애니메이션 적용
+            animation-name: 애니메이션이름 
+            animation-duration: 애니메이션 동작시간
+            animation-timing-function: 가속도(linear, ease, ease-in...)
+            animation-delay: 대기시간
+            animation-iteration: 반복횟수, infinite(무한)
+            animation-direction: 방향, alternate 역방향
+
+     -->
+     <style>
+        @keyframes scaleFont{
+            0% {
+                font-size: 1rem;
+            }
+
+            50% {
+                font-size: 3rem;
+            }
+
+            100% {
+                font-size: 2rem;
+            }
+        }
+
+        span {
+            animation: scaleFont 3s infinite;
+        }
+
+        /* span {
+            animation-name: scaleFont;
+            animation-duration: 3s;
+            animation-iteration: infinite;
+        } */
+
+     </style>
+</head>
+<body>
+    <span>hahahaahahaah</span>
+</body>
+</html>

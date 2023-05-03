@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p:nth-child(odd) {
+            font-size: 100px;
+            color: aqua;
+            transition: color 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+        }
+        p:hover {
+            color: red;
+        }
+        p:nth-child(even) {
+            color: beige;
+        }
+
+        body > p {
+            font-weight: bold;
+        }
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        선택자 {
+            속성1: 값1;
+            속성2: 값2;
+        }
+
+        선택자(selector)
+        요소(태그:엘리먼트)를 선택하게 하는 이름
+        id 선택자
+        class 선택자
+        태그 선택자
+
+        가상 클래스
+        nth-child(a), nth-of-type(a)
+        1:첫번쨰 요소
+        even: 짝수번쨰
+        odd: 홀수번쨰
+        2n-1: 홀수번쨰 요소
+        3n: 3의 배수번째 요소
+     -->
+     <!-- 
+        선택자 조합
+        여러 선택자를 이용하여 요소를 선택
+        자식관계(>)
+            부모 > 자식
+            부모 선택자(바로 위의 부모)
+        자손관계(whitespace)
+            조상선택자 자식
+            조상선택자(부모포함)
+        본인
+            선택자1선택자2
+            선택자1과 선택자2를 모두 만족
+            ex) #ptag.hong div.ptag(O)
+                divp .ptagdiv(X)
+            조합시 순서를 잘 고려해야 함  
+      -->
+     <p class="ptag">안녕하세요.</p>
+     <p class="ptag">안녕하세요 유관순입니다</p>
+     <p>안녕하세요. 신사입니다.</p>
+     <p>안녕하세요. 임당입니다.</p>
+     <p>안녕하세요. 이이입니다.</p>
+</body>
+</html>

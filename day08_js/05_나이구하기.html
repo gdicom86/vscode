@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    이름: <input type="text" id="name"><br>
+    주민번호: <input type="text" id="rNum"><br>
+    <button type="button" onclick="pressBtn();">확인</button>
+    <h3 id="result">
+        <!-- 이름, 생년월일, 성별, 나이 -->
+    </h3>
+
+    <script>
+        function pressBtn() {
+            let now = new Date(); //오늘날짜
+            let thisYear = now.getFullYear();
+            //thisYear = console.log(now.getFullYear); 연도만 나타남
+            //now.getMonth()+1; 0~11월 +1
+            //now.getDate();
+            //now.getDay(); 요일 반환 0(일)~6(토)
+            //getHours(), getMinutes(), getSeconds()
+
+            now.toLocaleDateString(); // 현재 날짜형태로 바뀜
+            now.toLocaleTimeString(); // 현재 시간
+            now.toLocaleString(); // 날짜 시간
+
+
+            let name = document.getElementById('name').value;
+            let idNum = document.getElementById('rNum').value;
+            let birth = idNum.slice(0, idNum.indexOf('-'));      
+            let sex = idNum.charAt(idNum.indexOf('-')+1);
+
+            thisYear = parseInt(thisYear);
+            idNum = idNum.slice(0, 2);
+            idNum = parseInt(idNum);
+            
+            
+            let age;
+            if(sex == '1' || sex == '2') {
+                age = thisYear - (idNum+1900); 
+            } else {
+                age = thisYear - (idNum+2000);
+            } 
+
+            if(sex == '1' || sex == '3') {
+                sex = '남자';
+            } else {
+                sex = '여자';
+            }
+            
+            
+            let full = `name : ${name} 생년월일 : ${birth} 성별 : ${sex} 나이 : ${age}`;
+
+            let result = document.getElementById('result');
+            result.innerText = full;
+        }
+        
+
+
+    </script>
+
+</body>
+</html>

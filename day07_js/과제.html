@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 이름 국어 영어 수학  합계 평균-->
+    <form action="#" id="point">
+        <fieldset>
+            <legend>성적표 계산기</legend>
+            이름: <input type="text" id="userName"><br>
+            국어: <input type="number" id="korean"><br>
+            영어: <input type="number" id="english"><br>
+            수학: <input type="number" id="math"><br>
+            <button id="btn" onclick="result();">합계평균구하기버튼</button>
+        </fieldset>   
+    </form>
+    <ol id="resultOl">
+
+    </ol>
+    <script>
+        function result() {
+            let id = document.getElementById('userName').value;
+            let korean = document.getElementById('korean').value;
+            let english = document.getElementById('english').value;
+            let math = document.getElementById('math').value;
+
+            korean = parseInt(korean);
+            english = parseInt(english);
+            math = parseInt(math);
+
+            if((korean > 100 || korean < 0) || (english > 100 || english < 0) || (math > 100 || math < 0)) {  
+                alert('잘못된 점수를 입력하셨습니다.');
+            } else {
+                let sum = korean+english+math;
+                let avg = Math.round(sum/3);
+
+                if(avg >= 60) {
+                alert('합격입니다.');
+                } else {
+                alert('불합격입니다.');
+                }
+
+                let info = `<li>이름: ${id}</li><li>국어: ${korean}</li><li>영어: ${english}</li><li>수학: ${math}</li>
+                <li>합계: ${sum}</li><li>평균: ${avg}</li>`;
+
+                let ol = document.getElementById('resultOl');
+                ol.innerHTML = info;
+            }
+        }      
+    </script>
+</body>
+</html>

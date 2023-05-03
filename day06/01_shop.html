@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpleshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/55381cd0ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="01_shop.css">
+    <script src="/day06/01_shoop.js"></script>
+    
+</head>
+<body>
+    <script>
+        let btnEvent = document.querySelector('#btn2');
+        btnEvent.onclick = function() {
+            document.querySelector('.header').setProperty('display','none');
+            document.querySelector('#header-tmp').setProperty('display','block');
+        }
+        let btnEvent2 = document.querySelector('#btn-tmp');
+        btnEvent2.onclick = function() {
+            document.querySelector('.header').setProperty('display','block');
+            document.querySelector('#header-tmp').setProperty('display','none');
+        }
+    </script>
+    <div>
+        <!-- 네비게이션라인 -->
+        <div class="navbar">
+            <a href=""><i class="fa-brands fa-airbnb"></i></i>airbnb</a>
+            <form for="search" id="search-bar">
+                <input type="text" name="search" placeholder="어디든지 | 언제든 일주일 | 게스트 추가">
+                <button id="btn" type="submit" name="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <ul>
+                <li>
+                    <a href="#">Content</a>
+                </li>
+                <li>
+                    <a href="#">Shop</a>
+                </li>
+                <li>
+                    <a href="#">Cart</a>
+                </li>
+                <li>
+                    <a href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- main image 자리 -->
+    <div id="header">
+        <button id="btn2" onclick="noneheadBtn();"><i class="fa-solid fa-angle-right fa-2x"></i></button>
+    </div>
+    <div id="header-tmp">
+        <button id="btn-tmp" onclick="nonetmpheadBtn();"><i class="fa-solid fa-angle-right fa-2x"></i></button>
+    </div>
+    <!-- 중간제목 -->
+    <h1>Our New Product</h1>
+    <!-- 상품 상세 -->
+    <div class="products">
+        <!-- 상품상세 3*3 -->
+        <a href="#">
+            <div class="product">
+                <img src="/img/geoje.jpg" alt="">
+                <ul>
+                    <li>거제도 오션뷰</li>
+                    <li>139,000</li>
+                </ul>
+            </div>
+        </a>
+        <a href="#">
+            <div class="product">
+                <img src="/img/하프오션뷰.jpg" alt="">
+                <ul>
+                    <li>거제도 오션뷰</li>
+                    <li>139,000</li>
+                </ul>
+            </div>
+        </a>
+        <a href="#">
+            <div class="product">
+                <img src="/img/풀빌라.jpg" alt="">
+                <ul>
+                    <li>거제도 오션뷰</li>
+                    <li>139,000</li>
+                </ul>
+            </div>
+        </a>
+        <a href="#">
+            <div class="product">
+                <img src="/img/니시키.jpg" alt="">
+                <ul>
+                    <li>거제도 오션뷰</li>
+                    <li>139,000</li>
+                </ul>
+            </div>
+        </a>
+        <a href="#">
+            <div class="product">
+                <img src="/img/obun.jpg" alt="">
+                <ul>
+                    <li>거제도 오션뷰</li>
+                    <li>139,000</li>
+                </ul>
+            </div>
+        </a>
+        <a href="#">
+            <div class="product">
+                <img src="/img/niseko.jpg" alt="">
+                <ul>
+                    <li>거제도 오션뷰</li>
+                    <li>139,000</li>
+                </ul>
+            </div>
+        </a>
+        <a href="#">
+            <div class="product">
+                <img src="/img/ize.jpg" alt="">
+                <ul>
+                    <li>거제도 오션뷰</li>
+                    <li>139,000</li>
+                </ul>
+            </div>
+        </a>
+        <a href="#">
+            <div class="product">
+                <img src="/img/ganggu.jpg" alt="">
+                <ul>
+                    <li>거제도 오션뷰</li>
+                    <li>139,000</li>
+                </ul>
+            </div>
+        </a>
+        <a href="#">
+            <div class="product">
+                <img src="/img/aquaholic.jpg" alt="">
+                <ul>
+                    <li>거제도 오션뷰</li>
+                    <li>139,000</li>
+                </ul>
+            </div>
+        </a>
+    </div>
+    <!-- footer -->
+    <!-- div말고 footer 그대로 써도 됨 -->
+    <div class="footer">
+        <!-- 아이콘 3개 -->
+        <!-- 인스타그램, 페이스북, 트위터 -->
+        <ul>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </ul>
+    </div>
+    
+
+</body>
+</html>

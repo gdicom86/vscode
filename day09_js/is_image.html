@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        input 파일에 파일명.확장자 입력하여 전송버튼을 누르면
+        이미지파일인지 검사하여 
+        이미지 파일이면 '정상파일입니다.'
+        이미지 파일이 아니면 '이미지 파일만 가능합니다'
+        라고 출력하기
+        이미지 파일: jpg, png, jpeg, gif
+        대문자로 된 확장자명도 판단 가능해야됨.
+     -->
+     <form for="">
+        파일명: <input type="text" id="fileName" name="fileName">
+        <button type="button" id="subBtn" onclick="checkFile();">전송</button>
+     </form>
+    
+    <h3 id="here"></h3>
+
+     <script>
+         let insert = '';
+         let here = document.getElementById('here');
+         function checkFile() {
+            let fileName = document.getElementById('fileName').value;
+            let sepfile = fileName.slice(fileName.indexOf('.')+1);
+            sepfile = sepfile.toLowerCase();
+            console.log(sepfile);
+            if(sepfile == 'jpg' || sepfile == 'png' || sepfile == 'jpeg' || sepfile == 'gif') {
+                insert = '정상파일입니다.';
+            } else {
+                insert = '이미지 파일만 가능합니다.';
+            }
+            here.innerText = insert;
+        }
+     </script>
+
+</body>
+</html>

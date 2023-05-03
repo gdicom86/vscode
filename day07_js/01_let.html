@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 사용</title>
+    <!-- 
+        자바 스크립트 변수: 값을 담고 있는 메모리 공간의 이름
+        자바스크립트에서 변수는 선언(배정, 할당, 선언)하는 역할만 함.
+        var, let (ES6부터는 let키워드를 사용하라 권장)
+        const
+
+        -범위 제한 없음(사용안함)
+        var name = "hong";
+        var name = "Kim";
+
+        -지역 변수 개념
+        let name = "hong";
+        변수의 값을 재할당 할 수 있다.
+        유효하지 않은 범위에서는 재선언도 가능
+
+        ** const: 변수 재선언, 재할당 불가 **
+        고정된 값을 사용하는 의미 규칙, 참조, 룰, 객체 정의할 떄 사용
+        선언한 이후 항상 고정 값을 가지는 경우 사용
+
+     -->
+</head>
+<body>
+    <script>
+        // var name = "hong";
+       
+        // var name = "Kim";
+        // console.log(name);
+
+        let name = "Hong";
+        console.log(name);
+        console.log(typeof name); // typeof 사용 예시
+
+        // if(조건식) {
+        //     재선언
+        // }
+
+
+        const testName = "Hong1";
+        console.log(testName);
+        // testName = "Lee";
+        // console.log(testName); 재선언 불가 error
+
+        let age = 20;
+        let address = "Seoul";
+        let hobby = "Computer";
+        // , + 둘 다 사용 가능
+        console.log("이름: ", testName, " 나이: ", age + " 주소: ", address);
+
+        //백틱 ``: 백틱 내부에 코드삽입이 가능하다. ${} 통해 삽입
+
+        console.log(`취미: `, hobby);
+        console.log(`취미:  ${hobby}`);
+
+    </script>
+</body>
+</html>

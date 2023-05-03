@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div > a {
+            color: white;
+        }
+        #naver {
+            background-color: green;
+            transition: color 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+            transition: background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+        }
+        #naver:hover {
+            color:  green;
+            background-color: white;
+        }
+        div:nth-child(2) > a {
+            background-color: red;
+        }
+        div:nth-child(3) > a {
+            background-color: blue;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        div 3개를 만들어
+        naver google daum
+        초록   빨강   파랑
+     -->
+     <div><a href="http://naver.com" id="naver">naver</a></div>
+     <div><a href="http://google.com">google</a></div>
+     <div><a href="http://daum.net">daum</a></div>
+</body>
+</html>

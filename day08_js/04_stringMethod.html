@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>
+        가장 많이 다루는 데이터 타입: string
+    </H1>
+    <ul>
+        <li>
+            문자열 데이터는 index(0부터시작)를 가지고 있음.
+        </li>
+        <li>
+            문자열 데이터 값 내에서는 개행(br)하는것을 추천하지 않는다.
+        </li>
+        <li>
+            new String(); 객체 타입으로 선언은 가능하지만 추천하지 않음
+        </li>
+        <li>
+            length: 문자열의 총길이 => index는 length-1
+        </li>
+        <li>
+            <script>
+                let str = "문자열 사이의 <script> 글자 삽입";
+                console.log(str);
+            </script>
+        </li>
+    </ul>
+    <h1>
+        문자관련 메서드: java에서 사용하는 String 메서드와 비슷 
+    </h1>
+    <ul>
+        <li>
+            문자 추출 관련 메서드: substring(index, index), substr(), slice()
+        </li>
+        <li>
+            문자 대체 메서드: replace(old, new): 첫번째 매칭되는 문자만 replace, 대소문자 구분
+        </li>
+        <li>
+            문자열 양측 공백제거: trim()
+        </li>
+        <li>
+            padStart(목표문자길이, 채울문자) / padEnd: 앞쪽 / 뒤쪽에서 채우기<br>
+            문자값의 힌트, 010101 - *****
+        </li>
+        <li>
+            해당 index 문자 추출: charAt(index)
+        </li>
+        <li>
+            문자열의 위치를 반환: indexOf('str');
+        </li>
+        <li>
+            startWith('str') / endWith('str'): 지정 문자열이 탐색대상 문자열에서 시작/끝에 존재하는지 확인하는 메서드<br>
+            return true / false
+        </li>
+    </ul>
+    <script>
+        let str1 = "Apple, Banana, Orange";
+        let startIndex = 0;
+        let endIndex = 5; //endIndex는 미포함
+        console.log(str1.slice(startIndex, endIndex));
+        console.log(str1.slice(7)); // index부터 끝까지
+        console.log(str1.slice(-6));
+        //slice는 substring과 사용방법이 같음
+        //slice는 index에 -숫자를 입력하면 끝부터 출력
+
+        //substr(index, count); 시작 위치에서 몇개
+        console.log(str1.substr(0, 5)); // index0부터 5개
+
+        //replace
+        let text = 'Hello js World';
+        let newText = text.replace('js', 'Java');
+        console.log(newText);
+        newText = text.replace(/JS/i, "Java"); //대소문자 구분없이 can replace
+
+        text = 'Hello java world java!!';
+        newText = text.replace(/java/ig, "JS"); //문자열 전체 적용 g
+        console.log(newText);
+
+        let trimText = "                  이번주 학습과정               ";
+        console.log(trimText);
+        console.log(trimText.trim());
+
+        //padStart(전체문자열개수, "str") / padEnd()
+        let padText = "abc";
+        console.log(padText.padStart(3,'*'));
+        console.log(padText.padStart(5,'*'));
+
+        //주민등록번호 000101-1234567 => 000101-1******
+        let testText = "000101-1234567";
+        let num = testText.length;
+        testText = testText.substr(0, 8);
+        let endText = testText.padEnd(num, '*');
+        console.log(endText);
+
+        let sex = testText.charAt(testText.indexOf('-')+1);
+
+        if(sex == '1') {
+            console.log('남자');
+        } else if(sex == '2') {
+            console.log('여자');
+        }
+
+        console.log(sex=='1'?"남자":"여자");
+        console.log("---------------------");
+        let fullFileName = "20230413_javascript.string_method.html";
+        // 파일명 추출
+        let fileName = fullFileName.slice(fullFileName.indexOf('.')+1, fullFileName.lastIndexOf('.'));
+        console.log(fileName);
+        //파일작성일자 추출
+        let fileDate = fullFileName.substr(0, fullFileName.indexOf('_'));
+        console.log(fileDate);
+        //확장자 추출
+        let lastName = fullFileName.slice(fullFileName.lastIndexOf('.')+1);
+        console.log(lastName);
+    </script>
+</body>
+</html>

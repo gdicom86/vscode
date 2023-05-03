@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>
+        이중반복문: outer while -> 기준, inner while -> 계속반복
+    </h1>
+    <ol>
+        <li>outer while 1~3까지 반복</li>
+        <li>
+            inner while 1~5까지 반복
+        </li>
+        <li>
+            outer while: 1, inner while: 1~5까지 반복
+            outer while: 2, inner while: 1~5까지 반복
+            outer while: 3, inner while: 1~5까지 반복
+        </li>
+    </ol>
+    <h1>
+        구구단 2~9단 출력
+    </h1>
+    <button type="button" onclick="gugudan();">구구단 출력</button>
+    <div>
+        <!-- 2×1=2 3×1=3 4×1=4
+             2×2=4 3×2=6 4×2=8....
+            ....
+             2×9=18      9×9=81.......    -->
+        <!-- div 태그안에 table만들어 넣기 -->
+    </div>
+    <table border="1" id="tab">
+    </table>
+
+
+    <script>
+        function gugudan() {
+            let outerWhile = 2;
+            let innerWhile = 1;
+            let str = '';
+            let result;
+            while(outerWhile <= 9) {
+                str += `<tr>`;
+                innerWhile = 1;
+                while(innerWhile <= 9) {
+                    result = outerWhile * innerWhile;
+                    str += `<td>${outerWhile}X${innerWhile}= ${result}</td>`;
+                    innerWhile++;
+                }
+                outerWhile++;
+                str += `</tr>`;
+            }
+            document.getElementById('tab').innerHTML = str;
+        }
+    </script>
+</body>
+</html>

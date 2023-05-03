@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        li:first-child, li:last-child{
+            font-weight: bold;
+        }
+
+        li:nth-child(even) {
+            color: red;
+        }
+
+        ul > li:nth-child(3n) {
+            color: green;
+        }
+
+        ul {
+            font-size: 20px;
+        }
+
+        li::after {
+            content: "번째";
+        }
+
+        li::before {
+            content: "li태그";
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        전체크기 크고 굵게
+        짝수: 빨간색
+        3, 6, 9: 초록색
+        1, 10: 굵게
+     -->
+     <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+     </ul>
+</body>
+</html>

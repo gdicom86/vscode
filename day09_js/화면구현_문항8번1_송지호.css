@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 60px;
+}
+
+header {
+    background-color: black;
+    color: rgb(243, 243, 243);
+    padding: 20px;
+    width: 20%;
+    height: 100vh;
+}
+
+#main-h2 {
+    margin-bottom: 60px;
+}
+
+#second-ul {
+    text-align: center;
+}
+
+#second-ul i {
+    font-size: 24px;
+    margin: 10px;
+}
+
+li {
+    color: rgb(134, 134, 134);
+    margin-bottom: 16px;
+}
+
+main {
+    margin: 0;
+    width: 80%;
+    height: 100vh;
+}
+
+#background-img {
+    background-image: url(/img/오로라.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    color: rgb(243, 243, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#background-img div {
+    text-align: center;
+    
+}
+
+#moreDiv {
+    border: 1px solid white;
+    width: 160px;
+    padding: 20px 30px;
+    margin: 0 auto;
+}
+
+
+
+

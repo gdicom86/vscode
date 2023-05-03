@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        오늘은?
+    </h1>
+    <button onclick="btn();">Today</button>
+    <h3 id="text">
+        <!-- 오늘 날짜와 요일 출력 -->
+        <!-- 2023-04-13(목) -->
+    </h3>
+
+    <script>
+        function btn() {
+            let now = new Date();
+        // 오늘 날짜
+        let date = now.toLocaleDateString();
+        // 콘솔로 확인
+        console.log(now);
+    
+        // 오늘 요일
+        let gd = now.getDay();
+        // 콘솔로 확인
+        console.log(gd);
+        switch(gd) {
+            case 0: gd = '일요일';
+            break;
+            case 1: gd = '월요일';
+            break;
+            case 2: gd = '화요일';
+            break;
+            case 3: gd = '수요일';
+            break;
+            case 4: gd = '목요일';
+            break;
+            case 5: gd = '금요일';
+            break;
+            case 6: gd = '토요일';
+            break;
+        }
+
+        console.log(gd);
+
+        document.getElementById('text').innerText = `${date}(${gd})`;
+        }
+        
+
+        //
+    </script>
+
+</body>
+</html>

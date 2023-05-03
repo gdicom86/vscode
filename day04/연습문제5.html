@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-box {
+            margin: 0 auto;
+            width: 300px;
+            height: 500px;
+            border: 1px solid;
+            text-align: center;
+            padding: 10px;
+        }
+        .text-box {
+            height: 50px;
+            margin-bottom: 10px;
+            border: 3px solid;
+            line-height: 50px;
+        }
+        .box2 {
+            position: relative;
+            border: 3px solid;
+            height: 350px;
+            margin-bottom: 10px;
+        }
+        .red{
+            top:40px;
+            left: 40px;
+            position: absolute;
+            z-index: 10;
+            background: linear-gradient(to top, rgb(255, 0, 0), rgb(238, 231, 231));
+        }
+        .green{
+            top:80px;
+            left: 80px;
+            position: absolute;
+            z-index: 20;
+            background-color: green;
+        }
+        .blue{
+            top:120px;
+            left: 120px;
+            position: absolute;
+            z-index: 30;
+            background-color: blue;
+        }
+        .box2 div {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+        <div class="text-box box1">텍스트</div>
+        <div class="box2">
+            <div class="red"></div>
+            <div class="green"></div>
+            <div class="blue"></div>
+        </div>
+        <div class="text-box box3">텍스트</div>
+    </div>
+</body>
+</html>

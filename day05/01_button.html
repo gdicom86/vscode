@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/55381cd0ef.js" crossorigin="anonymous"></script>
+    <style>
+        div {
+            border: 2px solid rgb(3, 179, 3);
+            border-radius: 2px;
+            width: 40%;
+            height: 2rem;
+            margin: 2rem auto;
+            position: relative;
+            line-height: 2rem;
+        }
+        input {
+            border: 0;
+            width: 75%;
+            text-overflow: ellipsis;
+            outline: none;
+        }
+
+        .fa-keyboard {
+            position: absolute;
+            color: rgba(68, 68, 68, 0.8);
+            top: 0.5rem;
+            right: 3.4rem;
+        }
+
+        .fa-sort-down {
+            position: absolute;
+            color: rgb(3, 179, 3);
+            top:0.3rem;
+            right: 2.3rem;
+        }
+
+        button {
+            width: 2rem;
+            height: 2rem;
+            background-color: rgb(3, 179, 3);
+            border-style: none;
+            color: white;
+            position: absolute;
+            top:0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <form for="search">
+            <input type="text" name="search">
+            <button type="submit "name="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <i class="fa-regular fa-keyboard"></i>
+            <i class="fa-solid fa-sort-down"></i>
+        </form>
+    </div>
+</body>
+</html>

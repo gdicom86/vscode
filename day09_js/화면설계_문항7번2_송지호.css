@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    
+}
+
+body {
+    margin: 0;
+    min-width: 900px;
+    color: rgb(255,56,92);
+}
+
+a {
+    color: rgb(255,56,92);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar {
+    height: 60px;
+    padding: 10px 30px;
+}
+
+.navbar>a {
+    float:left;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.navbar>ul {
+    float:right;
+}
+
+.navbar>ul>li {
+    display: inline;
+    margin-left: 30px;
+}
+
+.navbar>ul>li>a {
+    font-size: 16px;
+}
+
+#header {
+    width: 100%;
+    height: 400px;
+    background-image: url(/img/2-days-madrid-insta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: 10px 0;
+    position: relative;
+}
+
+#header button {
+    position: absolute;
+    background-color: rgb(255,56,92);
+    width: 44px;
+    height: 44px;
+    top: 200px;
+    right: 20px;
+    position: absolute;
+    border-radius: 22px;
+    border-style: none;
+    color: white;
+}
+
+h1 {
+    margin: 48px 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+.products {
+   /* 그림사이즈 225 마진 20 */
+   width: 715px;
+   padding: 0;
+   margin: 40px auto;
+   text-align: center;
+}
+
+.products>a {
+    display: block;
+    float:left;
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.products>a:nth-child(3n) {
+    margin-right: 0;
+}
+
+.products>a img {
+    width: 225px;
+    height: 225px;
+}
+
+.products a {
+    transition: transform 0.3s ease-in;
+}
+
+.products a:hover {
+    transform: scale(1.05);
+}
+
+.products ul {
+    padding: 0;
+    text-align: center;
+    margin: 20px;
+}
+
+.footer {
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+    float: left;
+}
+
+footer ul {
+    margin: 0 32px;
+    clear: both;
+}
+   
+.footer ul i {
+    padding: 0 32px;
+}

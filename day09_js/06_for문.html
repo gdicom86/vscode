@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        java와 같은 형식으로 사용가능
+    </h1>
+    <ul>
+        <li>
+            for(초기값; 조건식 증감식) { code; }
+        </li>
+        <li>
+            for(let i = 0; i < 10; i++) { code; }
+        </li>
+        <li>
+            향상된 for문
+        </li>
+        <li>
+            <!-- 중요 -->
+            for of: for(let value of Array) { code; } 배열안의 내용 탐색
+        </li>
+        <li>
+            for in: for(let value in Object) { code; } 객체안의 내용 탐색
+        </li>
+    </ul>
+
+    <h3>
+        가위 바위 보 게임 10게임 승률 출력해보기
+    </h3>
+    <button type="button" id="btn">승률출력</button>
+    <h3>
+        10 게임 승률은 <span id="winrate"></span>%입니다.
+    </h3>
+
+
+    <script>
+        // 가위 바위 보는 컴퓨터 랜덤, 플레이어 랜덤
+        let user;
+        let comp;
+
+        document.getElementById('btn').addEventListener('click', function() {
+            let win = 0; //승리
+            let draw = 0; //무승부
+            let defeat = 0; //패배
+
+            for(let i=0; i <10; i++) {
+                let user = Math.floor(Math.random()*3)+1;
+                let comp = Math.floor(Math.random()*3)+1;
+
+                //switch 또는 if문을 활용하여 승/패/무의 횟수 증가
+                switch(user) {
+                    case 1: 
+                    if(comp == 1) {
+                        draw++;
+                    } else if(comp == 2) {
+                        defeat++;
+                    } else {
+                        win++;
+                    }
+                    break;
+                    case 2: 
+                    if(comp == 1) {
+                        win++;
+                    } else if(comp == 2) {
+                        draw++;
+                    } else {
+                        defeat++;
+                    }
+                    break;
+                    case 3: 
+                    if(comp == 1) {
+                        defeat++;
+                    } else if(comp == 2) {
+                        win++;
+                    } else {
+                        draw++;
+                    }
+                    break;
+                }
+            }
+            let winrate = ((win/10)*100);
+            console.log(winrate);
+            document.getElementById('winrate').innerText = `${winrate}`;
+
+            //승률계산
+            //(승리 / (10-무))*100
+        })
+    </script>
+
+</body>
+</html>

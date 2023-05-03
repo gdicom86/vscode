@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .java {
+            color: red;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading" class="">javascript</h1>
+    <h3 id="main">위의 글자를 클릭해보세요</h3>
+    <h3 id="test">눌러볼래?</h3>
+
+    <script>
+        let heading = document.getElementById('heading');
+        heading.onclick = function() {
+            // heading.style.color='red';
+            // heading의 class리스트에 java가 있으면 뺴고, 없으면 넣는다.
+            heading.classList.toggle('java');
+        }
+
+        let main = document.querySelector('#main');
+        main.onclick = function() {
+            main.style.setProperty('font-size', '30px');
+        }    
+
+        let test = document.querySelector('#test');
+        test.onclick = function() {
+            test.style.setProperty('font-weight', '200');
+        }
+
+    </script>
+
+</body>
+</html>

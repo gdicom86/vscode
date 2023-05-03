@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .list-container {
+        max-height: 550px; /* 화면에 보이는 항목 개수에 맞게 조절하세요 */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .list li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+
+      .button-container button {
+        flex: 1;
+        margin: 0 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list-container">
+      <button id="previous-button">이전 목록 보기</button>
+      <ul class="list">
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+        <li>항목 4</li>
+        <li>항목 5</li>
+      </ul>
+      <button id="next-button">다음 목록 보기</button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var list = document.querySelector(".list");
+        var previousButton = document.getElementById("previous-button");
+        var nextButton = document.getElementById("next-button");
+
+        var itemsToShow = 3; // 한 번에 보여질 항목 수
+        var currentIndex = 0;
+
+        function showItems() {
+          var items = Array.from(list.children);
+          items.forEach(function (item, index) {
+            if (index >= currentIndex && index < currentIndex + itemsToShow) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+
+          currentIndex += itemsToShow;
+        }
+
+        function showPreviousItems() {
+          currentIndex -= itemsToShow * 2;
+          if (currentIndex < 0) {
+            currentIndex = 0;
+          }
+          showItems();
+        }
+
+        previousButton.addEventListener("click", showPreviousItems);
+        nextButton.addEventListener("click", showItems);
+        showItems();
+      });
+    </script>
+  </body>
+</html>

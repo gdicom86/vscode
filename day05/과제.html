@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        min-width: 넓은 화면 기준 스타일링 (웹화면 스타일링)
+        max-width: 좁은 화면 스타일링 (폰화면 스타일링)
+        */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100%
+            
+        }
+
+        .header {
+            height: 60px;
+            background-color: rgb(32, 8, 8);
+        }
+
+        .header p {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .main-img {
+            height: 350px;
+            background-image: url(/img/note.jpg);
+            background-position: center;
+            background-size: cover; 
+        }
+
+        .subject {
+            height: 350px;
+            background-image: url(/img/tokyotower.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .content {
+            height: 380px;
+            background-color: white;
+        }
+
+        .sub {
+            height: 200px;
+            background-image: url(/img/monitor.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .footer {
+            height: 200px;
+            background-image: url(/img/keyboard.jpg);
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer div {
+            border: 5px solid white;
+            width: 200px;
+            height: 50px;
+            margin:auto;
+            line-height: 50px;
+            color: white;
+            font-weight: bold;
+
+        }
+
+        @media screen and (min-width: 500px) {
+            .header {
+                height: 60px;
+            }
+            main-img {
+                height: 550px;
+            }
+            .subject {
+                height: 320px;
+            }
+            .content {
+                width: 50%;
+                float: left;
+                height: 400px;
+               
+            }
+            .sub {
+                width: 50%;
+                float: right;
+                height: 400px;
+
+            }
+            .footer {
+                clear: both;
+                height:200px;
+            }
+        }
+        @media screen and (min-width: 800px) {
+            .header {
+                height: 60px;
+            }
+            main-img {
+                height: 550px;
+            }
+            .subject {
+                width: 50%;
+                float: left;
+                height: 400px;
+            }
+            .content {
+                width: 50%;
+                float: left;
+                height: 200px;
+            }
+            .sub {
+                width: 50%;
+                float: right;
+                height: 200px
+            }
+            .footer {
+                clear: both;
+                height:200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p>INO</p>
+    </div>
+    <div class="main-img"></div>
+    <div class="subject"></div>
+    <div class="content">
+        
+        <h3>Portfolio</h3>
+        <h2>Make Hardware Soft</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here</p>
+    </div>
+    <div class="sub"></div>
+    <div class="footer">
+        <div>VIEW MORE</div>
+    </div>
+</body>
+</html>
